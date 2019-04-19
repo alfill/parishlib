@@ -1,9 +1,8 @@
 $(document).ready(function() {
     var table = $('#example').DataTable({
-        //"data": testdata.jsondata,
-        "ajax": "booklist-data.json",
-        //"ajax": "https://api.myjson.com/bins/tpzqc",   
-        //"ajax": "booklist-data.json",
+       
+        "ajax": "https://alfill.github.io/parishlib/booklist-data.json",
+        
         responsive: false,
         ordering: false,
         lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "∞"]],
