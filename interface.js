@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var table = $('#example').DataTable({
         //"data": testdata.jsondata,
-        "ajax": "http://127.0.0.1:8887/booklist-data.json",
+        "ajax": "booklist-data.json",
         //"ajax": "https://api.myjson.com/bins/tpzqc",   
         //"ajax": "booklist-data.json",
         responsive: false,
