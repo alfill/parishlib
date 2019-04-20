@@ -2,13 +2,19 @@ $(document).ready(function() {
     var table = $('#example').DataTable({
        
         "ajax": "https://alfill.github.io/parishlib/booklist-data.json",
+        //ajax: "http://127.0.0.1:8887/booklist-data.json",
+
+        //deferRender:    true,
+        //scrollY:        480,
+        //scrollCollapse: true,
+        //scroller:       true
         
         responsive: false,
         ordering: false,
-        lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "∞"]],
-        pageLength: 25,
-        fixedHeader: true,
-        info: true,
+        //lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "∞"]],
+        //pageLength: 25,
+        //fixedHeader: true,
+        //info: true,
         //select:"single",
         columns: [{
                 "className": 'details-control',
