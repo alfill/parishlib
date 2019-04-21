@@ -7,35 +7,39 @@
 <meta name="robots" content="all">
     <title>Список книг</title>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" ></script> 
+
+  <link  href='https://cdn.datatables.net/scroller/2.0.0/css/scroller.dataTables.min.css'>
+  
 
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.1.0/css/rowGroup.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="ext/style.css"> -->
-
-  <!--  <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" /> --> 
-  <!-- <link href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css">  -->
-  <!-- <link href="https://cdn.datatables.net/scroller/2.0.0/css/scroller.dataTables.min.css">  -->
-  <!-- <link rel="stylesheet" type="text/css" href="ext/datatables.min.css"> -->
+   https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js
+     https://code.jquery.com/jquery-3.3.1.js      -->
+  
+   <!-- <link rel="stylesheet" type="text/css" href="ext/datatables.min.css"> -->
   
   
 
   <script type="text/javascript" src="ext/interface.js" async></script>
   <!-- <script type="text/javascript" src="ext/datatables.min.js"></script> -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" defer></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" defer></script> -->
   
   <!-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>  -->
-  <script src="https://cdn.datatables.net/rowgroup/1.1.0/js/dataTables.rowGroup.min.js" defer></script>
-  <!-- <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script> -->
-  <!-- <script src="https://cdn.datatables.net/scroller/2.0.0/js/dataTables.scroller.min.js"></script> -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" defer></script> 
+  <script src="https://cdn.datatables.net/rowgroup/1.1.0/js/dataTables.rowGroup.min.js" defer></script> 
+   <script src="https://cdn.datatables.net/scroller/2.0.0/js/dataTables.scroller.min.js" defer></script> 
 
    <script src="ext/lazyload.js" async></script>
+
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
     
 </head>
 <body>
 
-    <table class="display no-wrap compact" id="example" cellspacing="0" width="98%">
+    <table class="display compact" id="example" cellspacing="0" width="98%">
         <thead>
             <tr>
                 <th></th> 
@@ -58,11 +62,20 @@
 
   <script>
     $(document).ready(function() {
+       // $("head").append("<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' />");
         $("head").append("<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' />");
+        //  href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'
+        //$("head").append("<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/rowgroup/1.1.0/css/rowGroup.bootstrap.min.css' />");
         $("head").append("<link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/rowgroup/1.1.0/css/rowGroup.dataTables.min.css' />");
         $("head").append("<link rel='stylesheet' type='text/css' href='ext/style.css' />");
     });
- </script>
+ </script>  
 
 </body>
 </html>
+<!--
+ <link  href='https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' />
+  <link  href='https://cdn.datatables.net/rowgroup/1.1.0/css/rowGroup.dataTables.min.css'>
+  <link  href='https://cdn.datatables.net/scroller/2.0.0/css/scroller.dataTables.min.css'>
+
+  <link  href="ext/style.css">   -->

@@ -1,15 +1,16 @@
 $(document).ready(function() {
     var table = $('#example').DataTable({
-       
-        "ajax": "https://alfill.github.io/parishlib/booklist-data.json",
+        dom: "frtip",
+        ajax: "https://alfill.github.io/parishlib/booklist-data.json",
         //ajax: "http://127.0.0.1:8887/booklist-data.json",
 
-        //deferRender:    true,
-        //scrollY:        480,
-        //scrollCollapse: true,
-        //scroller:       true
+        scrollY:        540,
+        deferRender:    true,
         
-        responsive: false,
+        //scrollCollapse: true,
+        scroller:  true,
+        //paging: false,
+        //responsive: false,
         ordering: false,
         //lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "∞"]],
         //pageLength: 25,
@@ -45,7 +46,7 @@ $(document).ready(function() {
             "processing": "Подождите...",
             "search": "Поиск:",
             "lengthMenu": "Показано _MENU_ записей",
-            "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
+            "info": "Отображено [_START_ - _END_] из _TOTAL_ записей",
             "infoEmpty": "Записи с 0 до 0 из 0 записей",
             "infoFiltered": "(отфильтровано из _MAX_ записей)",
             "infoPostFix": "",
