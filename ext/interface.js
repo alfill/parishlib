@@ -1,10 +1,11 @@
 $(document).ready(function() {
     var table = $('#example').DataTable({
         dom: "frtip",
+        
         ajax: "https://alfill.github.io/parishlib/booklist-data.json",
         //ajax: "http://127.0.0.1:8887/booklist-data.json",
 
-        scrollY:        540,
+        scrollY:        520,
         deferRender:    true,
         
         //scrollCollapse: true,
@@ -12,8 +13,6 @@ $(document).ready(function() {
         //paging: false,
         //responsive: false,
         ordering: false,
-        //lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "∞"]],
-        //pageLength: 25,
         //fixedHeader: true,
         //info: true,
         //select:"single",
@@ -22,22 +21,13 @@ $(document).ready(function() {
                 "orderable": false,
                 "data":      null,
                 "defaultContent": '',
-                /*,
-                               "render": function () {
-                                   return '<i class="fa fa-plus-square" aria-hidden="true"></i>';
-                               },  */
                 width: "15px",
                 height: "15px"
             },
-           // { "data": "name" },      // title
-           // { "data": "position" },     // author
-           // { "data": "office" },  // publisher
-           // { "data": "salary" }       //  year
-            { "data": "title" },      // title
-            { "data": "author" },     // author
-            { "data": "publisher" },  // publisher
-            { "data": "year" }       //  year
-            //{ "data": "part" }        //
+            { "data": "title" },      
+            { "data": "author" },    
+            { "data": "publisher" }, 
+            { "data": "year" }
         ],
         //"order": [[1, 'asc']],
         rowGroup: { dataSrc: "part" },
@@ -91,28 +81,15 @@ $(document).ready(function() {
 
 function format(d) {
     // `d` is the original data object for the row
-    var trans = '<tr>' + '<td>Издание/Перевод: </td>' + 
-                '<td>' + d.translate + '</td>' +
-                '</tr>';
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-        
-        trans + 
+    let trans = " ", ser = " ", notes = " ", pag = " ", isb = " ", source = " ";
+    if (d.translate != "") { trans = '<tr>' + '<td>Тип издания: </td>' + '<td>' + d.translate + '</td>' + '</tr>'; }
+    if (d.series != "") { ser = '<tr>' + '<td>Серия: </td>' + '<td>' + d.series + '</td>' + '</tr>'; }
+    if (d.annotation != "") { notes = '<tr>' + '<td>Аннотация: </td>' + '<td>' + d.annotation + '</td>' + '</tr>'; }
+    if (d.pages != "") { pag = '<tr>' + '<td>Страниц: </td>' + '<td>' + d.pages + '</td>' + '</tr>'; }
+    if (d.isbn != "") { isb = '<tr>' + '<td>ISBN: </td>' + '<td>' + d.isbn + '</td>' + '</tr>'; }
+    if (d.sourceurl != "") { source = '<tr>' + '<td>Источник: </td>' + '<td>' + d.sourceurl + '</td>' + '</tr>'; }
 
-        '<tr>' +
-          '<td>Серия: </td>' + '<td>' + d.classification + '</td>' +
-        '</tr>' +
-        '<tr>' +
-          '<td>Аннотация: </td>' + '<td>' + d.annotation + '</td>' +
-        '</tr>' +
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +        
+        trans + ser + notes + pag + isb + source + 
         '</table>';
     }
-
-
-    /*
-
-        '<tr>' +
-          '<td>Издание/Перевод: </td>' + '<td>' + d.translate + '</td>' +
-        '</tr>' +
-
-
-    */
